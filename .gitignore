@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+.vitepress/cache
+.svelte-kit
+.netlify
+.vercel
