@@ -4,6 +4,7 @@ export default defineConfig({
   title: 'OpenSIN Blog',
   description: 'Engineering insights from the OpenSIN AI agent platform.',
   lang: 'en-US',
+  outDir: '../dist',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
