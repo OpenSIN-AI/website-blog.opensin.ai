@@ -4,30 +4,15 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "bun install && bunx vite build && bun run build:copy",
-    "build:copy": "cp -r public/* dist/",
-    "preview": "vite preview",
-    "clean": "rm -rf dist",
+    "dev": "vitepress dev post",
+    "build": "bun install && bunx vitepress build post",
+    "preview": "vitepress preview post",
+    "clean": "rm -rf .vitepress/dist dist",
     "lint": "tsc --noEmit"
   },
-  "dependencies": {
-    "lucide-react": "^0.546.0",
-    "motion": "^12.23.24",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.13.2"
-  },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.14",
-    "@types/node": "^22.14.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react": "^5.0.4",
-    "tailwindcss": "^4.1.14",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0",
-    "vitepress": "^1.6.4"
+    "vitepress": "^1.6.4",
+    "typescript": "~5.8.2"
   },
   "license": "Apache-2.0"
 }
