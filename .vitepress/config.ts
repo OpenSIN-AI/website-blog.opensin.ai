@@ -5,6 +5,9 @@ export default defineConfig({
   description: 'Engineering insights from the OpenSIN AI agent platform.',
   lang: 'en-US',
   outDir: '../dist',
+  markdown: {
+    theme: 'dark',
+  },
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
@@ -40,8 +43,8 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/OpenSIN-AI/website-blog.opensin.ai/edit/main/:path',
     },
-  },
-  markdown: {
-    theme: 'dark',
+    footer: {
+      message: '© 2026 OpenSIN. Explore the ecosystem: [OpenSIN](https://opensin.ai) · [MyOpenSIN](https://my.opensin.ai) · [Docs](https://docs.opensin.ai) · [GitHub](https://github.com/OpenSIN-AI).',
+    },
   },
 })
