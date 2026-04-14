@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "bun install && bunx vite build",
+    "build": "bun install && bunx vite build && bun run build:copy",
+    "build:copy": "cp -r public/* dist/",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
