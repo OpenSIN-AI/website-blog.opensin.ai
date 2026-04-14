@@ -1,0 +1,178 @@
+[
+  {
+    "slug": "fleet-architecture",
+    "title": "The OpenSIN Fleet Architecture: 100+ Autonomous Agents",
+    "date": "2026-03-15",
+    "excerpt": "How we built the first open-source AI agent fleet with 100+ specialized agents working 24/7.",
+    "tags": [
+      "Architecture",
+      "Agents"
+    ],
+    "content": "<p>OpenSIN is not just another AI wrapper. It's a <strong>fleet of 100+ autonomous agents</strong> organized into 18 specialized teams, each with deep domain expertise and the ability to delegate work peer-to-peer via the A2A protocol.</p>\n\n<h2>The Problem with Single-Agent Systems</h2>\n<p>Most AI coding tools (Claude Code, OpenClaw, Cursor) operate as single agents. They're great at focused tasks but lack the ability to coordinate complex, multi-domain workflows.</p>\n\n<h2>OpenSIN's Fleet Design</h2>\n<p>OpenSIN solves this with a <strong>multi-agent architecture</strong> where each agent specializes in one domain:</p>\n<ul><li><strong>Code Backend</strong> \u2014 API design, database schemas, architecture</li><li><strong>Code Frontend</strong> \u2014 React, Vue, design systems, UI/UX</li><li><strong>Security</strong> \u2014 14 agents covering pentesting, fuzzing, forensics</li><li><strong>Research</strong> \u2014 Web research, synthesis, report generation</li><li><strong>Social Media</strong> \u2014 Twitter, TikTok, LinkedIn, Reddit automation</li><li><strong>Messaging</strong> \u2014 Telegram, WhatsApp, Discord, Signal bots</li></ul>\n\n<h2>A2A: The Glue That Holds It Together</h2>\n<p>The Agent-to-Agent (A2A) protocol is what makes the fleet coherent. Agents publish machine-readable capability cards at <code>/.well-known/agent-card.json</code> and communicate via HTTP with Server-Sent Events for streaming results.</p>\n\n<h2>Self-Healing by Design</h2>\n<p>Every agent has a heartbeat monitor. If an agent crashes or gets rate-limited, the system auto-restarts it and resumes from the last checkpoint.</p>\n\n<p>Read more about our <a href='/post/a2a-protocol/'>A2A protocol design</a> or explore the <a href='https://github.com/OpenSIN-AI'>OpenSIN GitHub organization</a>.</p>"
+  },
+  {
+    "slug": "a2a-protocol",
+    "title": "A2A Protocol: The Open Standard for Agent-to-Agent Communication",
+    "date": "2026-03-12",
+    "excerpt": "Deep dive into the Agent-to-Agent protocol that lets AI agents delegate work without human mediation.",
+    "tags": [
+      "Protocol",
+      "A2A"
+    ],
+    "content": "<p>The <strong>Agent-to-Agent (A2A) protocol</strong> is the open communication standard that enables autonomous AI agents to discover, delegate, and collaborate peer-to-peer \u2014 no central broker required.</p>\n\n<h2>Why A2A Matters</h2>\n<p>MCP (Model Context Protocol) solved how a single LLM connects to tools. But what happens when one agent needs to hand off work to another? That's where A2A comes in.</p>\n\n<h2>Protocol Overview</h2>\n<ul><li><strong>Agent Discovery</strong> \u2014 Machine-readable Agent Cards at <code>/.well-known/agent-card.json</code></li><li><strong>Task Delegation</strong> \u2014 HTTP POST <code>/a2a/v1/tasks</code> with structured goal</li><li><strong>Streaming Results</strong> \u2014 Server-Sent Events for real-time progress</li><li><strong>Artifact Exchange</strong> \u2014 Structured return values (code, files, API responses)</li><li><strong>Push Notifications</strong> \u2014 Webhook callbacks for long-running tasks</li></ul>\n\n<h2>Production at Scale</h2>\n<p>OpenSIN runs 100+ agents on A2A across 18 teams. Any agent in any language (Python, TypeScript, Go, Rust) can implement A2A.</p>"
+  },
+  {
+    "slug": "security-architecture",
+    "title": "Security Architecture: Zero Secrets in Code",
+    "date": "2026-03-08",
+    "excerpt": "How OpenSIN ensures no API keys, tokens, or secrets ever touch the codebase.",
+    "tags": [
+      "Security",
+      "Architecture"
+    ],
+    "content": "<p>Security is not an afterthought in OpenSIN. Our <strong>zero secrets in code</strong> policy means no API keys, tokens, or credentials ever appear in source code.</p>\n\n<h2>The Auth Broker Pattern</h2>\n<p>OpenSIN uses a centralized auth broker that agents query at runtime. Agents receive short-lived, scoped tokens \u2014 never raw credentials.</p>\n\n<h2>Key Components</h2>\n<ul><li><strong>Secret Authority</strong> \u2014 Centralized secret management with audit logging</li><li><strong>Approval Lanes</strong> \u2014 Sensitive actions require human sign-off via Telegram/Slack</li><li><strong>Token Rotation</strong> \u2014 Automatic rotation of all credentials</li><li><strong>Scoped Permissions</strong> \u2014 Minimum necessary permissions per agent</li></ul>"
+  },
+  {
+    "slug": "oci-deployment",
+    "title": "Deploying OpenSIN on Oracle Cloud Infrastructure (OCI)",
+    "date": "2026-03-05",
+    "excerpt": "Step-by-step guide to deploying OpenSIN agents on OCI Always Free VMs.",
+    "tags": [
+      "DevOps",
+      "OCI"
+    ],
+    "content": "<p>Running autonomous AI agents requires infrastructure that's always on. OCI's Always Free tier gives us an <strong>A1.Flex VM with 4 OCPUs and 24GB RAM</strong> \u2014 enough to run dozens of agents 24/7 at zero cost.</p>\n\n<h2>What We Run on OCI</h2>\n<ul><li><strong>n8n</strong> \u2014 Workflow orchestration and webhook routing</li><li><strong>Token Factory</strong> \u2014 Headless Docker containers for API token rotation</li><li><strong>Supabase</strong> \u2014 PostgreSQL database for agent state</li><li><strong>OpenCode</strong> \u2014 AI coding agents running as persistent processes</li></ul>\n\n<h2>Cost: $0/month</h2>\n<p>Total infrastructure cost: zero.</p>"
+  },
+  {
+    "slug": "cost-optimization",
+    "title": "Cost Optimization: Running AI Agents for $0/month",
+    "date": "2026-03-01",
+    "excerpt": "How we keep infrastructure costs at zero while running 100+ AI agents.",
+    "tags": [
+      "Infrastructure",
+      "Cost"
+    ],
+    "content": "<p>We've engineered OpenSIN to run on <strong>100% free infrastructure</strong> through OCI Always Free, Hugging Face Spaces, and Cloudflare Pages.</p>\n\n<h2>Infrastructure Breakdown</h2>\n<ul><li><strong>OCI A1.Flex</strong> \u2014 4 OCPUs, 24GB RAM (Always Free)</li><li><strong>Hugging Face Spaces</strong> \u2014 Individual agent workers (Free)</li><li><strong>Cloudflare Pages</strong> \u2014 Static websites (Free)</li><li><strong>Supabase</strong> \u2014 PostgreSQL database (Free tier: 500MB)</li></ul>"
+  },
+  {
+    "slug": "team-orchestration",
+    "title": "Team Orchestration: How 18 AI Teams Work Together",
+    "date": "2026-02-28",
+    "excerpt": "The organizational structure behind OpenSIN.",
+    "tags": [
+      "Architecture",
+      "Teams"
+    ],
+    "content": "<p>OpenSIN is a structured organization with 18 teams, each with a specific mission.</p>\n\n<h2>Team Structure</h2>\n<ul><li><strong>Team Code Backend</strong> \u2014 8 agents</li><li><strong>Team Code Frontend</strong> \u2014 6 agents</li><li><strong>Team Security</strong> \u2014 14 agents</li><li><strong>Team Social</strong> \u2014 9 agents</li><li><strong>Team Messaging</strong> \u2014 7 agents</li></ul>\n\n<h2>Cross-Team Collaboration</h2>\n<p>Teams communicate via A2A \u2014 all without human coordination.</p>"
+  },
+  {
+    "slug": "monitoring",
+    "title": "Monitoring 100+ Agents: Observability at Fleet Scale",
+    "date": "2026-02-25",
+    "excerpt": "Prometheus, Grafana, and structured logging for 100 agents.",
+    "tags": [
+      "Monitoring",
+      "DevOps"
+    ],
+    "content": "<p>Every agent pings a health endpoint every 30 seconds. Missed heartbeats trigger automatic restarts within 60 seconds.</p>\n\n<h2>Prometheus + Grafana</h2>\n<p>We expose metrics from every agent: task completion rate, token usage, error rate, and latency.</p>"
+  },
+  {
+    "slug": "vs-competitors",
+    "title": "OpenSIN vs OpenClaw vs Claude Code: Honest Comparison",
+    "date": "2026-02-20",
+    "excerpt": "Feature-by-feature comparison of the top AI agent frameworks.",
+    "tags": [
+      "Comparison",
+      "Analysis"
+    ],
+    "content": "<p>OpenSIN ships 100+ agents across 18 teams with native A2A. OpenClaw supports individual agents but no inter-agent communication. Claude Code is a single-agent coding assistant.</p>\n\n<h2>Model Support</h2>\n<p>OpenSIN: 1000+ models. OpenClaw: major providers. Claude Code: Anthropic only.</p>\n\n<h2>Communication Channels</h2>\n<p>OpenSIN: 19+ channels. OpenClaw: limited. Claude Code: none.</p>"
+  },
+  {
+    "slug": "model-routing",
+    "title": "Intelligent Model Routing: Using the Right LLM for Each Task",
+    "date": "2026-02-15",
+    "excerpt": "How OpenSIN agents select the best LLM automatically.",
+    "tags": [
+      "LLM",
+      "Architecture"
+    ],
+    "content": "<ul><li><strong>Coding tasks</strong> \u2192 Claude Sonnet 4.6</li><li><strong>Research</strong> \u2192 Gemini 3.1 Pro</li><li><strong>Creative writing</strong> \u2192 Gemini 3 Flash</li><li><strong>Simple tasks</strong> \u2192 Qwen 3.5 or Ollama</li></ul>\n\n<p>By routing simple tasks to cheaper models, we reduce API costs by 60%.</p>"
+  },
+  {
+    "slug": "apple-ecosystem",
+    "title": "OpenSIN in the Apple Ecosystem: macOS, iOS, and Beyond",
+    "date": "2026-02-10",
+    "excerpt": "Integration with macOS, iOS, Calendar, Messages, and more.",
+    "tags": [
+      "Apple",
+      "Integration"
+    ],
+    "content": "<p>Dedicated agents for macOS, iOS, Calendar, Messages, Notes, Reminders, Photos, and Shortcuts.</p>\n\n<h2>Use Cases</h2>\n<ul><li>Auto-schedule meetings from email context</li><li>Summarize daily calendar every morning</li><li>Auto-respond to iMessages</li><li>Organize Photos with AI tagging</li></ul>"
+  },
+  {
+    "slug": "ci-cd",
+    "title": "CI/CD for AI Agents: Automated Testing and Deployment",
+    "date": "2026-02-05",
+    "excerpt": "Automated build-test-deploy pipeline for 100+ AI agents.",
+    "tags": [
+      "CI/CD",
+      "DevOps"
+    ],
+    "content": "<p>Every PR triggers: lint \u2192 type check \u2192 unit tests \u2192 integration tests \u2192 build \u2192 deploy to staging.</p>"
+  },
+  {
+    "slug": "agent-forge",
+    "title": "Agent Forge: Creating New AI Agents in Minutes",
+    "date": "2026-02-01",
+    "excerpt": "Scaffold, configure, and deploy a new agent in under 10 minutes.",
+    "tags": [
+      "Developer Experience",
+      "Agents"
+    ],
+    "content": "<ul><li>Creates the agent repo with standardized structure</li><li>Generates agent.json card</li><li>Sets up n8n webhook integration</li><li>Configures Docker for OCI deployment</li></ul>"
+  },
+  {
+    "slug": "self-healing",
+    "title": "Self-Healing Fleet: Automatic Failure Recovery",
+    "date": "2026-01-28",
+    "excerpt": "Architecture that keeps 100+ agents running 24/7.",
+    "tags": [
+      "Architecture",
+      "Reliability"
+    ],
+    "content": "<h2>Failure Modes We Handle</h2>\n<ul><li><strong>Agent crash</strong> \u2014 Auto-restart from checkpoint</li><li><strong>Rate limiting</strong> \u2014 Switch to backup account</li><li><strong>Network outage</strong> \u2014 Exponential backoff</li><li><strong>Token expiry</strong> \u2014 Auto-refresh via Token Factory</li></ul>"
+  },
+  {
+    "slug": "n8n-integration",
+    "title": "n8n Integration: The Router Behind the Fleet",
+    "date": "2026-01-25",
+    "excerpt": "n8n as the indestructible router for inbound work.",
+    "tags": [
+      "n8n",
+      "Architecture"
+    ],
+    "content": "<p>n8n Community Edition receives webhooks, normalizes payloads, and dispatches work to the right agents.</p>"
+  },
+  {
+    "slug": "supabase",
+    "title": "Supabase: Central Database for the Agent Fleet",
+    "date": "2026-01-20",
+    "excerpt": "Single source of truth for agent state, tokens, and fleet management.",
+    "tags": [
+      "Database",
+      "Supabase"
+    ],
+    "content": "<h2>Database Schema</h2>\n<ul><li><strong>agents</strong> \u2014 Agent registry with health status</li><li><strong>tokens</strong> \u2014 API token pool</li><li><strong>tasks</strong> \u2014 Task queue with status tracking</li><li><strong>teams</strong> \u2014 Team definitions</li><li><strong>audit_log</strong> \u2014 Complete audit trail</li></ul>"
+  },
+  {
+    "slug": "future-vision",
+    "title": "The Future of OpenSIN: 2026 Roadmap",
+    "date": "2026-01-15",
+    "excerpt": "Enterprise features, marketplace, and true AI autonomy.",
+    "tags": [
+      "Vision",
+      "Roadmap"
+    ],
+    "content": "<h2>Q2 2026: Enterprise Features</h2><p>RBAC, SSO, SOC 2 compliance, air-gap deployment.</p>\n\n<h2>Q3 2026: Agent Marketplace</h2><p>Browse, install, and subscribe to specialized agents.</p>\n\n<h2>Q4 2026: True Autonomy</h2><p>Agents that set their own goals and form ad-hoc teams.</p>"
+  }
+]
