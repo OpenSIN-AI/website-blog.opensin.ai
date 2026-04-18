@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'OpenSIN Blog',
-  description: 'Engineering insights from the OpenSIN AI agent platform.',
+  title: 'OpenSIN-AI Blog',
+  description: 'Engineering insights from the OpenSIN-AI organization and agent platform.',
   lang: 'en-US',
   outDir: '../dist',
   markdown: {
@@ -11,8 +11,9 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'OpenSIN', link: 'https://opensin.ai' },
+      { text: 'OpenSIN-AI', link: 'https://opensin.ai' },
       { text: 'MyOpenSIN', link: 'https://my.opensin.ai' },
+      { text: 'Docs', link: 'https://docs.opensin.ai' },
     ],
     sidebar: [
       {
@@ -44,7 +45,7 @@ export default defineConfig({
       pattern: 'https://github.com/OpenSIN-AI/website-blog.opensin.ai/edit/main/:path',
     },
     footer: {
-      message: '© 2026 OpenSIN. Explore the ecosystem: [OpenSIN](https://opensin.ai) · [MyOpenSIN](https://my.opensin.ai) · [Docs](https://docs.opensin.ai) · [GitHub](https://github.com/OpenSIN-AI).',
+      message: '© 2026 OpenSIN-AI. Explore the ecosystem: [OpenSIN](https://opensin.ai) · [MyOpenSIN](https://my.opensin.ai) · [Docs](https://docs.opensin.ai) · [GitHub](https://github.com/OpenSIN-AI).',
     },
   },
 })
