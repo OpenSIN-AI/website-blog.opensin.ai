@@ -1,20 +1,20 @@
 ---
 layout: home
 
-title: OpenSIN Engineering Blog
-description: Deep dives into AI agent architecture, multi-agent orchestration, security, and autonomous AI. 100+ open-source agents.
+title: OpenSIN-AI Engineering Blog
+description: Deep dives into AI agent architecture, multi-agent orchestration, security, and autonomous AI from the OpenSIN-AI organization.
 ---
 
 <script setup>
-import { data } from './posts.data'
+import { posts } from './posts'
 </script>
 
 <div class="vp-doc">
-  <h1>OpenSIN Engineering Blog</h1>
-  <p class="lead">Technical deep-dives into autonomous agents, A2A protocol, fleet architecture, deployment, and operations.</p>
+  <h1>OpenSIN-AI Engineering Blog</h1>
+  <p class="lead">Official engineering stories from the OpenSIN-AI organization — autonomous agents, A2A protocol, fleet architecture, deployment, and operations.</p>
 
   <div class="posts">
-    <article v-for="post in data.posts" :key="post.slug" class="post-item">
+    <article v-for="post in posts" :key="post.slug" class="post-item">
       <h2>
         <a :href="post.url">{{ post.title }}</a>
       </h2>

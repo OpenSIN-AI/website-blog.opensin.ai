@@ -128,7 +128,3 @@ export const posts = [
     url: '/post/future-vision/',
   },
 ]
-
-export default {
-  posts,
-}
