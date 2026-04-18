@@ -1,5 +1,5 @@
 ---
-title: Intelligent Model Routing: Using the Right LLM for Each Task
+title: "Intelligent Model Routing: Using the Right LLM for Each Task"
 date: 2026-02-15
 excerpt: How OpenSIN agents automatically select the best LLM model based on task type and cost.
 tags: [LLM, Architecture]

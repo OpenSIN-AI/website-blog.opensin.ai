@@ -1,5 +1,5 @@
 ---
-title: OpenSIN in the Apple Ecosystem: macOS, iOS, and Beyond
+title: "OpenSIN in the Apple Ecosystem: macOS, iOS, and Beyond"
 date: 2026-02-10
 excerpt: How OpenSIN agents integrate with macOS, iOS, Calendar, Messages, and the entire Apple ecosystem.
 tags: [Apple, Integration]

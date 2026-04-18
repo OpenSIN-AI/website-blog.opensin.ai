@@ -1,7 +1,7 @@
 ---
-title: The Future of OpenSIN: Where We Are Going in 2026
+title: "The Future of OpenSIN: Where We Are Going in 2026"
 date: 2026-01-15
-excerpt: Our vision for the next 12 months: enterprise features, marketplace, and true AI autonomy.
+excerpt: "Our vision for the next 12 months: enterprise features, marketplace, and true AI autonomy."
 tags: [Vision, Roadmap]
 ---
 
