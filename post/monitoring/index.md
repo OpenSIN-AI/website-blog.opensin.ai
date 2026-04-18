@@ -1,5 +1,5 @@
 ---
-title: Monitoring 100+ Agents: Observability at Fleet Scale
+title: "Monitoring 100+ Agents: Observability at Fleet Scale"
 date: 2026-02-25
 excerpt: Prometheus, Grafana, and structured logging — how we keep 100 agents healthy 24/7.
 tags: [Monitoring, DevOps]

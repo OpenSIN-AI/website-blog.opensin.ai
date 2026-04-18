@@ -1,5 +1,5 @@
 ---
-title: Supabase: The Central Database for the Agent Fleet
+title: "Supabase: The Central Database for the Agent Fleet"
 date: 2026-01-20
 excerpt: How we use Supabase as the single source of truth for agent state, tokens, and fleet management.
 tags: [Database, Supabase]
