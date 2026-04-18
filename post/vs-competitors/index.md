@@ -1,5 +1,5 @@
 ---
-title: OpenSIN vs OpenClaw vs Claude Code: Honest Comparison
+title: "OpenSIN vs OpenClaw vs Claude Code: Honest Comparison"
 date: 2026-02-20
 excerpt: A feature-by-feature comparison of the top AI agent frameworks — no hype, just facts.
 tags: [Comparison, Analysis]

@@ -1,5 +1,5 @@
 ---
-title: Self-Healing Fleet: How OpenSIN Recovers from Failures Automatically
+title: "Self-Healing Fleet: How OpenSIN Recovers from Failures Automatically"
 date: 2026-01-28
 excerpt: The self-healing architecture that keeps 100+ agents running 24/7 without human intervention.
 tags: [Architecture, Reliability]

@@ -1,5 +1,5 @@
 ---
-title: Agent Forge: Creating New AI Agents in Minutes
+title: "Agent Forge: Creating New AI Agents in Minutes"
 date: 2026-02-01
 excerpt: The OpenSIN Agent Forge skill that lets you scaffold, configure, and deploy a new agent in under 10 minutes.
 tags: [Developer Experience, Agents]

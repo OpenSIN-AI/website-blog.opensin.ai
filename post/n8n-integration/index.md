@@ -1,5 +1,5 @@
 ---
-title: n8n Integration: The Router Behind the OpenSIN Fleet
+title: "n8n Integration: The Router Behind the OpenSIN Fleet"
 date: 2026-01-25
 excerpt: How we use n8n as the indestructible "dumb" router for all inbound work and webhook processing.
 tags: [n8n, Architecture]

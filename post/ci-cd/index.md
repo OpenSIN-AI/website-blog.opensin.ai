@@ -1,5 +1,5 @@
 ---
-title: CI/CD for AI Agents: Automated Testing and Deployment
+title: "CI/CD for AI Agents: Automated Testing and Deployment"
 date: 2026-02-05
 excerpt: How we automated the entire build-test-deploy pipeline for 100+ AI agents.
 tags: [CI/CD, DevOps]

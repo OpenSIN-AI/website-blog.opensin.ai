@@ -130,5 +130,9 @@ export const posts = [
 ]
 
 export default {
-  posts,
+  load() {
+    return {
+      posts,
+    }
+  },
 }

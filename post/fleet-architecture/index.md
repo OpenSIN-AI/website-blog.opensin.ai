@@ -1,5 +1,5 @@
 ---
-title: The OpenSIN Fleet Architecture: 100+ Autonomous Agents
+title: "The OpenSIN Fleet Architecture: 100+ Autonomous Agents"
 date: 2026-03-15
 excerpt: How we built the first open-source AI agent fleet with 100+ specialized agents working 24/7.
 tags: [Architecture, Agents]

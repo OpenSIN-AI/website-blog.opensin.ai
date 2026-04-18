@@ -103,7 +103,7 @@ export default function Home() {
   return (
     <div className="space-y-12">
       <section className="text-center py-12">
-        <h1 className="text-4xl font-bold mb-4 text-accent">OpenSIN Engineering Blog</h1>
+        <h1 className="text-4xl font-black mb-4 text-accent">OpenSIN Engineering Blog</h1>
         <p className="text-text-muted text-lg max-w-2xl mx-auto">
           Deep dives into AI agent architecture, multi-agent orchestration, security, and infrastructure.
           Building the future of autonomous AI — open source.

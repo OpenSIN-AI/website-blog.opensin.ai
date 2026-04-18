@@ -1,5 +1,5 @@
 ---
-title: Team Orchestration: How 18 AI Teams Work Together
+title: "Team Orchestration: How 18 AI Teams Work Together"
 date: 2026-02-28
 excerpt: The organizational structure behind OpenSIN — from coding to social media, all autonomous.
 tags: [Architecture, Teams]

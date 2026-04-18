@@ -1,5 +1,5 @@
 ---
-title: Cost Optimization: Running AI Agents for $0/month
+title: "Cost Optimization: Running AI Agents for $0/month"
 date: 2026-03-01
 excerpt: How we keep infrastructure costs at zero while running 100+ AI agents across multiple platforms.
 tags: [Infrastructure, Cost]
