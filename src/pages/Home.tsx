@@ -102,21 +102,21 @@ const posts = [
 export default function Home() {
   return (
     <div className="space-y-12">
-      <section className="text-center py-12">
-        <h1 className="text-4xl font-bold mb-4 text-accent">OpenSIN Engineering Blog</h1>
-        <p className="text-text-muted text-lg max-w-2xl mx-auto">
-          Deep dives into AI agent architecture, multi-agent orchestration, security, and infrastructure.
-          Building the future of autonomous AI — open source.
+      <section className="py-16 text-center">
+        <p className="mb-4 text-xs font-medium uppercase tracking-[0.32em] text-accent">OpenSIN-AI engineering journal</p>
+        <h1 className="mb-4 text-4xl font-light tracking-tight text-white md:text-6xl">Market-ready stories from the OpenSIN-AI fleet.</h1>
+        <p className="mx-auto max-w-3xl text-lg text-text-muted">
+          Deep dives into AI agent architecture, multi-agent orchestration, security, and infrastructure — presented as one consistent OpenSIN-AI organization.
         </p>
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold mb-6">All Posts</h2>
+        <h2 className="mb-6 text-2xl font-medium text-white">Latest posts</h2>
         <div className="grid gap-6">
           {posts.map(post => (
-            <article key={post.id} className="border border-surface-highlight rounded-xl p-6 hover:border-accent transition-colors">
+            <article key={post.id} className="rounded-3xl border border-surface-highlight bg-white/[0.02] p-6 transition-all hover:-translate-y-0.5 hover:border-[#008060] hover:shadow-[0_0_24px_rgba(0,128,96,0.12)]">
               <time className="text-sm text-text-muted">{post.date}</time>
-              <h3 className="text-xl font-bold mt-2 mb-3">
+              <h3 className="mt-2 mb-3 text-xl font-medium text-white md:text-2xl">
                 <Link to={`/post/${post.id}`} className="hover:text-accent">{post.title}</Link>
               </h3>
               <p className="text-text-muted mb-4">{post.excerpt}</p>
