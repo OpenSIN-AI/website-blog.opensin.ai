@@ -1,5 +1,5 @@
 ---
-title: A2A Protocol: The Open Standard for Agent-to-Agent Communication
+title: "A2A Protocol: The Open Standard for Agent-to-Agent Communication"
 date: 2026-03-12
 excerpt: Deep dive into the Agent-to-Agent protocol that lets AI agents delegate work without human mediation.
 tags: [Protocol, A2A]

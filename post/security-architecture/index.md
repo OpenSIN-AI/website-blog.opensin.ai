@@ -1,5 +1,5 @@
 ---
-title: Security Architecture: Zero Secrets in Code
+title: "Security Architecture: Zero Secrets in Code"
 date: 2026-03-08
 excerpt: How OpenSIN ensures no API keys, tokens, or secrets ever touch the codebase.
 tags: [Security, Architecture]
